@@ -92,6 +92,7 @@ body {
     margin: 0 10rem;
 }
 
+/* ISS Animation Effect */
 .iss {
     transition: .5s ease-in-out all;
     cursor: pointer;
@@ -101,6 +102,7 @@ body {
     transform: scale(1.2);
 }
 
+/* Tiangong Animation Effect */
 .tiangong {
     transition: .5s ease-in-out all;
     cursor: pointer;
