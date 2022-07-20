@@ -1,0 +1,123 @@
+/* Global Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #2e2686;
+    font-family: 'Zen Dots', cursive;
+}
+
+/* Header Section */
+.header {
+    background-image: url(space-bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: repeat;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    
+}
+
+.header p {
+    color: #ffffff;
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+
+.header-button a {
+    background-color: #a644d4;
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    border-radius: 50rem;
+    cursor: pointer;
+    transition: .5s ease-in-out all;
+    font-family: 'Zen Dots', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.header-button a:hover {
+    color: #a644d4;
+    background-color: #ffffff;
+}
+
+/* Crafts Section */
+#crafts {
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.crafts-box {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crafts-box h3 {
+    color: #ffffff;
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.crafts-box img {
+    width: 350px;
+    margin: 0 10rem;
+}
+
+.iss {
+    transition: .5s ease-in-out all;
+    cursor: pointer;
+}
+
+.iss:hover {
+    transform: scale(1.2);
+}
+
+.tiangong {
+    transition: .5s ease-in-out all;
+    cursor: pointer;
+}
+
+.tiangong:hover {
+    transform: scale(1.2);
+}
+
+#crafts,
+#iss_people,
+#tiangong_people {
+    display: none;
+}
+
+#number {
+    margin-top: 8rem;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}

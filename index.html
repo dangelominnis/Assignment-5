@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Jquery Script -->
+    <script src="jquery.js"></script>
+  </head>
+  
+  <body>
+    <!-- Header Section -->
+    <section class="header">
+      <h1>Explore Into Space</h1>
+      <p>Find the missing astronauts!</p>
+      <div class="header-button">
+        <a href="#spacecraft" id="spacecraft">Blastoff!</a>
+      </div>
+    </section>
+
+    <!-- Crafts Section -->
+    <div id="crafts">
+      <p id="number"></p>
+      <p>Choose a spaceship from below to know who they are!</p>
+      <!-- Crafts-box Section -->
+      <div class="crafts-box">
+        <!-- ISS Craft -->
+        <div class="iss">
+          <img src="iss-craft.png" id="iss">
+          <h3>ISS</h3>
+          <div id="iss_people">
+          </div>
+        </div>
+        <!-- Tiangong Craft -->
+        <div class="tiangong">
+          <img src="tiangong-craft.png" id="tiangong">
+          <h3>Tiangong</h3>
+          <div id="tiangong_people">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+      $.getJSON('http://api.open-notify.org/astros.json', function(data) {
+        $('#number').html('Currently there are <b>'+data['number']+'</b> working in space.');
+        data["people"].forEach(element => {
+          if (element.craft == "ISS") {
+            $('#iss_people').append('<p>'+element.name+'</p>');
+          } else {
+            $('#tiangong_people').append('<p>'+element.name+'</p>');
+          }
+        });
+      });
+
+      $('#spacecraft').click(function () {
+        $('#crafts').slideToggle();
+      })
+      
+      $('#iss').click(function () {
+        $('#iss_people').slideToggle();
+      })
+      
+      $('#tiangong').click(function () {
+        $('#tiangong_people').slideToggle();
+      })
+    </script>
+
+  </body>
+</html>
