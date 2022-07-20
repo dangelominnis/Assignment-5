@@ -50,13 +50,15 @@
     </div>
 
     <!-- Javascript -->
-    <script>
+    <script src="main.js"></script>
+    <!-- <script>
       $.getJSON('http://api.open-notify.org/astros.json', function(data) {
         $('#number').html('Currently there are <b>'+data['number']+'</b> working in space.');
         data["people"].forEach(element => {
           if (element.craft == "ISS") {
             $('#iss_people').append('<p>'+element.name+'</p>');
-          } else {
+          }
+          else {
             $('#tiangong_people').append('<p>'+element.name+'</p>');
           }
         });
@@ -73,7 +75,7 @@
       $('#tiangong').click(function () {
         $('#tiangong_people').slideToggle();
       })
-    </script>
+    </script> -->
 
   </body>
 </html>
